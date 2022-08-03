@@ -1,0 +1,11 @@
+	Spring Boot é um framework Java open source que tem como objetivo facilitar esse processo em aplicações Java. Consequentemente, ele traz mais agilidade para o processo de desenvolvimento, uma vez que devs conseguem reduzir o tempo gasto com as configurações iniciais. Com o Spring Boot conseguimos abstrair e facilitar a configuração de, por exemplo: servidores, gerenciamento de dependências, configurações de bibliotecas, métricas & health checks, entre outros!
+
+
+	Os benefícios de usar o Spring boot é que ele auxilia nas configurações iniciais necessárias para que os desenvolvedores possam, enfim, começar a codificar, além de contribuir com projetos mais ágeis e organizados. Ou seja com o Spring Boot, você não precisa temer ter que gastar seu tempo desenvolvendo uma aplicação do zero, já que receberá a maioria dos recursos necessários. Para cumprir com esse propósito, o framework se baseia em quatro princípios centrais: - Oferecer uma experiência de início de projeto rápida e direta; - Apresentar uma visão opinativa e flexível sobre o modo como os projetos Spring devem ser configurados; - Fornecer requisitos não funcionais pré-configurados; - Não prover geração de código e zerar a necessidade de arquivos XML.
+
+	A adição de dependências pode ser feita através do Spring Initializr, pois a ferramenta cuida de algumas configurações sendo uma delas a adição das dependências necessárias para qualquer projeto baseado em Spring.
+
+	Na sua opinião, qual é a melhor IDE para trabalhar com o Spring Boot: Spring Tools Suites, IntelliJ IDEA, Eclipse ou NetBeans ? === Acredito que a melhor IDE seria o Eclipse, pois o o Spring fornece uma IDE totalmente customizada para o desenvolvimento de aplicações do ecossistema spring: o Spring Tool Suite (STS). Porém(Particularmante) eu não gosto do Eclipse e para o meu uso acredito que a melhor IDE seria o Intellij.
+
+	Spring Initializr é uma ferramenta baseada na Web que gera a estrutura do projeto Spring Boot. Os IDEs modernos integraram o Spring Initializr que fornece a estrutura inicial do projeto tornando muito fácil para os desenvolvedores selecionar a configuração necessária para seus projetos.
+
