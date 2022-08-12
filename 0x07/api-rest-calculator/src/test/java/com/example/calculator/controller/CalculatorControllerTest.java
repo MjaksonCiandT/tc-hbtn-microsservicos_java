@@ -55,7 +55,6 @@ public class CalculatorControllerTest {
 
     @Test
     void calculeDayBetweenDate() throws Exception {
-
         RequestBuilder request = get("/calculator/calculeDayBetweenDate?localDate1=2022-01-01&localDate2=2022-01-10");
         MvcResult result = mvc.perform(request).andReturn();
         assertEquals("9", result.getResponse().getContentAsString());
