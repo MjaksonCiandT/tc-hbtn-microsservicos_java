@@ -10,25 +10,25 @@ import javax.persistence.GenerationType;
 
 @Entity
 public class Product {
-    @Id
+        @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
     private String code;
     private String name;
     private String description;
-    private BigDecimal prica;
+    private BigDecimal price;
     private LocalDateTime createdOne;
     private Boolean status;
 
     public Product() {
     }
 
-    public Product(Long id, String code, String name, String description, BigDecimal prica, LocalDateTime createdOne, Boolean status) {
+    public Product(Long id, String code, String name, String description, BigDecimal price, LocalDateTime createdOne, Boolean status) {
         this.id = id;
         this.code = code;
         this.name = name;
         this.description = description;
-        this.prica = prica;
+        this.price = price;
         this.createdOne = createdOne;
         this.status = status;
     }
@@ -65,12 +65,12 @@ public class Product {
         this.description = description;
     }
 
-    public BigDecimal getPrica() {
-        return prica;
+    public BigDecimal getPrice() {
+        return price;
     }
 
-    public void setPrica(BigDecimal prica) {
-        this.prica = prica;
+    public void setPrice(BigDecimal price) {
+        this.price = price;
     }
 
     public LocalDateTime getCreatedOne() {
@@ -92,14 +92,14 @@ public class Product {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof Product)) return false;
         Product product = (Product) o;
-        return getId().equals(product.getId()) && getCode().equals(product.getCode()) && getName().equals(product.getName()) && getDescription().equals(product.getDescription()) && getPrica().equals(product.getPrica()) && getCreatedOne().equals(product.getCreatedOne()) && getStatus().equals(product.getStatus());
+        return Objects.equals(getId(), product.getId()) && Objects.equals(getCode(), product.getCode()) && Objects.equals(getName(), product.getName()) && Objects.equals(getDescription(), product.getDescription()) && Objects.equals(getPrice(), product.getPrice()) && Objects.equals(getCreatedOne(), product.getCreatedOne()) && Objects.equals(getStatus(), product.getStatus());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getCode(), getName(), getDescription(), getPrica(), getCreatedOne(), getStatus());
+        return Objects.hash(getId(), getCode(), getName(), getDescription(), getPrice(), getCreatedOne(), getStatus());
     }
 
     @Override
@@ -109,7 +109,7 @@ public class Product {
                 ", code='" + code + '\'' +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
-                ", prica=" + prica +
+                ", price=" + price +
                 ", createdOne=" + createdOne +
                 ", status=" + status +
                 '}';
