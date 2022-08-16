@@ -13,6 +13,7 @@ public class Product {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
+    private String code;
     private String name;
     private String description;
     private BigDecimal prica;
@@ -22,8 +23,9 @@ public class Product {
     public Product() {
     }
 
-    public Product(Long id, String name, String description, BigDecimal prica, LocalDateTime createdOne, Boolean status) {
+    public Product(Long id, String code, String name, String description, BigDecimal prica, LocalDateTime createdOne, Boolean status) {
         this.id = id;
+        this.code = code;
         this.name = name;
         this.description = description;
         this.prica = prica;
@@ -37,6 +39,14 @@ public class Product {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public String getName() {
@@ -84,18 +94,19 @@ public class Product {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Product product = (Product) o;
-        return Objects.equals(getId(), product.getId()) && Objects.equals(getName(), product.getName()) && Objects.equals(getDescription(), product.getDescription()) && Objects.equals(getPrica(), product.getPrica()) && Objects.equals(getCreatedOne(), product.getCreatedOne()) && Objects.equals(getStatus(), product.getStatus());
+        return getId().equals(product.getId()) && getCode().equals(product.getCode()) && getName().equals(product.getName()) && getDescription().equals(product.getDescription()) && getPrica().equals(product.getPrica()) && getCreatedOne().equals(product.getCreatedOne()) && getStatus().equals(product.getStatus());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getName(), getDescription(), getPrica(), getCreatedOne(), getStatus());
+        return Objects.hash(getId(), getCode(), getName(), getDescription(), getPrica(), getCreatedOne(), getStatus());
     }
 
     @Override
     public String toString() {
         return "Product{" +
                 "id=" + id +
+                ", code='" + code + '\'' +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", prica=" + prica +
